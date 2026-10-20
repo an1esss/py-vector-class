@@ -2,9 +2,11 @@ from math import acos, degrees, cos, sin, radians
 
 
 class Vector:
-    def __init__(self, x: float, y: float) -> None:
-        self.x = round(x, 2)
-        self.y = round(y, 2)
+    def __init__(self, coordinate_x: float, coordinate_y: float) -> None:
+        self.x = round(coordinate_x, 2)
+        self.y = round(coordinate_y, 2)
+        self.coordinate_x = self.x
+        self.coordinate_y = self.y
 
     def __add__(self, other: Vector) -> Vector:
         new_x = self.x + other.x
